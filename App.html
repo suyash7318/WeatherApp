@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Weather App</title>
+  <link rel="stylesheet" href="App.css">
+  <link rel="icon" href="favicon-1.png" type="image/png">
+
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Smart Weather App</a>
+
+      <ul class="nav-links">
+        <li>
+          <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer">Official Weather Info</a>
+        </li>
+        <li>
+          <button id="dark-toggle" title="Toggle Dark/Light Mode">🌓</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Main Card (initially hidden for fade-in) -->
+  <div class="card hidden">
+    <h1 class="welcome">Welcome to Smart Weather App</h1>
+    <div class="controls">
+      <div class="search">
+        <input type="text" placeholder="Enter city name" spellcheck="false">
+        <button id="search-btn"><img src="search.png" alt="Search"></button>
+        <button id="voice-btn"><img src="mic.png" alt="Voice"></button>
+      </div>
+      <button id="geo-btn" title="Use My Location">Use Current Location</button>
+    </div>
+    
+    <!-- Loader (Spinner) -->
+    <div class="loader" id="loader"></div>
+    
+    <div class="error" id="error">
+      <p>Invalid city name or unable to fetch data.</p>
+    </div>
+    <div class="weather" id="weather">
+      <img src="" alt="Weather Icon" class="weather-icon">
+      <h1 class="temp"></h1>
+      <h2 class="city"></h2>
+      <div class="details">
+        <div class="col">
+          <img src="humidity.png" alt="Humidity">
+          <div class="humidity"></div>
+          <p>Humidity</p>
+        </div>
+        <div class="col">
+          <img src="wind.png" alt="Wind Speed">
+          <div class="wind"></div>
+          <p>Wind Speed</p>
+        </div>
+      </div>
+    </div>
+    <div class="forecast" id="forecast">
+      <h3 align = "center">5 Days Weather Forecast</h3>
+      <div class="forecast-container"></div>
+    </div>
+  </div>
+  
+  <script src="App.js"></script>
+</body>
+</html>
